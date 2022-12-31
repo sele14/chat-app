@@ -4,6 +4,8 @@ use std::sync::mpsc::{self, TryRecvError};
 use std::thread;
 use std::time::Duration;
 
+// based on: https://www.youtube.com/watch?v=CIhlfJSvxe4&list=WL&index=16&t=1s&ab_channel=TensorProgramming
+
 const LOCAL: &str = "127.0.0.1:6000";
 // set buffer size of message
 const MSG_SIZE: usize = 32;
