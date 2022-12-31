@@ -17,9 +17,11 @@ fn main() {
     let listener = TcpListener::bind(LOCAL).expect("Listener failed to bind");
     listener
         .set_nonblocking(true)
-        .expect("Cannot set non-blocking");
+        .expect("Failed to set non-blocking");
 
     let mut clients = vec![];
+
+    // pass to transmitter and receiver
     let (tx, rx) = mpsc::channel::<String>();
     loop {
         if let Ok((mut socket, addr)) = listener.accept() {
