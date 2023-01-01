@@ -1,11 +1,13 @@
 # Start server
 
 `cd server`
+
 `cargo run`
 
 # Start client
 
 `cd client`
+
 `cargo run`
 
 ---
